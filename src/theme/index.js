@@ -23,6 +23,10 @@ const theme = {
     xs: '16px',
     md: '9px',
   },
+  breakpoints: {
+    xs: 0,
+    md: 768,
+  },
 };
 
 export default theme;
