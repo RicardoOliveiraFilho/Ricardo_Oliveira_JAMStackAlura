@@ -19,9 +19,9 @@ const theme = {
   },
   fontFamily: '\'Fira Sans\', \'Fira Sans Condensed\', sans-serif',
   typographyVariants,
-  marginValues: {
-    xs: '16px',
-    md: '9px',
+  spaceValues: {
+    xs: 16,
+    md: 9,
   },
   breakpoints: {
     xs: 0,
