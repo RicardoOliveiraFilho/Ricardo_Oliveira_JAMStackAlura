@@ -2,6 +2,7 @@ import React from 'react';
 
 import Box from '../src/components/foundation/layout/Box';
 import Cover from '../src/components/commons/Cover';
+import Header from '../src/components/commons/Header';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       justifyContent="space-between"
     >
       <Cover />
+      <Header />
     </Box>
   );
 }
