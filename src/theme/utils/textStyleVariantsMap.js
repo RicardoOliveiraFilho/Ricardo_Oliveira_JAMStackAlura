@@ -99,6 +99,18 @@ const TextStyleVariantsMap = {
     text-transform: ${({ theme }) => theme.typographyVariants.cardText.textTransform};
     line-height: ${({ theme }) => theme.typographyVariants.cardText.lineHeight};
   `,
+  textInvokeModalMD: css`
+    font-size: ${({ theme }) => theme.typographyVariants.textInvokeModalMD.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.textInvokeModalMD.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.textInvokeModalMD.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.textInvokeModalMD.lineHeight};
+  `,
+  textInvokeModalXS: css`
+    font-size: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.lineHeight};
+  `,
 };
 
 export default TextStyleVariantsMap;

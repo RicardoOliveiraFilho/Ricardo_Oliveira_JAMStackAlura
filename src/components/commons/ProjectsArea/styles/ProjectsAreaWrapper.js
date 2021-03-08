@@ -1,12 +1,21 @@
 import styled, { css } from 'styled-components';
 
 import breakpointsMedia from '../../../../theme/utils/breakpointsMedia';
+import textStyleVariantsMap from '../../../../theme/utils/textStyleVariantsMap';
 
 const ProjectsAreaWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  ${breakpointsMedia({
+    md: css`
+      h3 {
+        ${textStyleVariantsMap.textInvokeModalMD}
+      }
+    `,
+  })}
 `;
 
 ProjectsAreaWrapper.Projects = styled.div`
