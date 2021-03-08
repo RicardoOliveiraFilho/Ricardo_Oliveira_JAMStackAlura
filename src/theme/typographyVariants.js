@@ -97,6 +97,18 @@ const typographyVariants = {
     textTransform: 'capitalize',
     lineHeight: '22px',
   },
+  textInvokeModalMD: {
+    fontSize: '36px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '43px',
+  },
+  textInvokeModalXS: {
+    fontSize: '32px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '38px',
+  },
 };
 
 export default typographyVariants;
