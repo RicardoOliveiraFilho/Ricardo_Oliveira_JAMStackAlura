@@ -12,7 +12,7 @@ const ModalWrapper = styled.div`
   right: 0;
   bottom: 0;
   margin: auto;
-  overflow: scroll;
+  overflow: hidden;
 
   transition: .3s;
   z-index: 100;
