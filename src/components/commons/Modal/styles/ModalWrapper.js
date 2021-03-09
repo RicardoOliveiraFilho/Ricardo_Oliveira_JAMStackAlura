@@ -4,6 +4,7 @@ const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: flex-end;
   background: rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -12,6 +13,9 @@ const ModalWrapper = styled.div`
   bottom: 0;
   margin: auto;
   overflow: scroll;
+
+  transition: .3s;
+  z-index: 100;
 
   ${({ isOpen }) => {
     if (isOpen) {
