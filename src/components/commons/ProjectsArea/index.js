@@ -6,11 +6,11 @@ import Card from '../Card';
 import HighlightCard from '../HighlightCard';
 import Text from '../../foundation/Text';
 import Button from '../Button';
-import Box from '../../foundation/layout/Box';
 import Modal from '../Modal';
+import FormMensagem from '../../patterns/FormMensagem';
 
 export default function ProjectsArea() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   return (
     <ProjectsAreaWrapper>
@@ -45,14 +45,7 @@ export default function ProjectsArea() {
         }}
       >
         {(propsDoModal) => (
-          <Box
-            backgroundColor="white"
-            {...propsDoModal}
-          >
-            <div>
-              Conteúdo do Modal
-            </div>
-          </Box>
+          <FormMensagem propsDoModal={propsDoModal} />
         )}
       </Modal>
     </ProjectsAreaWrapper>
