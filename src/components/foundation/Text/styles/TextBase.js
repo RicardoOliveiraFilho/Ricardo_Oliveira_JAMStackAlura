@@ -9,6 +9,11 @@ const TextBase = styled.span`
   ${propToStyle('margin')}
   ${propToStyle('padding')}
   ${propToStyle('display')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('marginBottom')}
+  ${propToStyle('position')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('marginLeft')}
 `;
 
 export default TextBase;

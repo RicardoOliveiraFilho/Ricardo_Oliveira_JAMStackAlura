@@ -10,7 +10,7 @@ import Modal from '../Modal';
 import FormMensagem from '../../patterns/FormMensagem';
 
 export default function ProjectsArea() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <ProjectsAreaWrapper>

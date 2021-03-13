@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { createGlobalStyle } from 'styled-components';
 
 import ModalWrapper from './styles/ModalWrapper';
+import Button from '../Button';
 
 const LockScroll = createGlobalStyle`
   body {
     overflow: hidden;
   }
 `;
+
 export default function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
@@ -26,7 +28,7 @@ export default function Modal({ isOpen, onClose, children }) {
       <motion.div
         variants={{
           open: {
-            y: '-100%',
+            y: '0%',
           },
           closed: {
             y: '100%',
@@ -34,7 +36,7 @@ export default function Modal({ isOpen, onClose, children }) {
         }}
         animate={isOpen ? 'open' : 'closed'}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
         }}
         style={{
           display: 'flex',
@@ -43,6 +45,23 @@ export default function Modal({ isOpen, onClose, children }) {
       >
         {children({
           'data-model-safe-area': 'true',
+          buttonClose: (
+            <Button
+              type="submit"
+              circle
+              onClick={onClose}
+              marginTop={{
+                xs: '10px',
+                md: '0px',
+              }}
+              marginRight={{
+                xs: '-300px',
+                md: '0px',
+              }}
+            >
+              x
+            </Button>
+          ),
         })}
       </motion.div>
     </ModalWrapper>

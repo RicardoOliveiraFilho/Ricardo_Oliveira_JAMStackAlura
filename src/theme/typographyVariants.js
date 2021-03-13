@@ -109,6 +109,32 @@ const typographyVariants = {
     fontStyle: 'normal',
     lineHeight: '38px',
   },
+  labelModalXS: {
+    fontSize: '18px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '21px',
+  },
+  labelModalMD: {
+    fontSize: '28px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '33px',
+  },
+  titleModalXS: {
+    fontSize: '24px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '28px',
+    textTransform: 'uppercase',
+  },
+  titleModalMD: {
+    fontSize: '36px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '43px',
+    textTransform: 'uppercase',
+  },
 };
 
 export default typographyVariants;

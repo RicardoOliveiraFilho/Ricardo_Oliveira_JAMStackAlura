@@ -8,6 +8,11 @@ const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('backgroundColor')}
+  ${propToStyle('boxShadow')}
+  ${propToStyle('padding')}
+  ${propToStyle('width')}
+  ${propToStyle('height')}
+  ${propToStyle('borderRadius')}
 `;
 
 export default Box;

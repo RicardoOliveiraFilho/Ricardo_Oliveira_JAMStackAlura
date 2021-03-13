@@ -111,6 +111,32 @@ const TextStyleVariantsMap = {
     font-style: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.fontStyle};
     line-height: ${({ theme }) => theme.typographyVariants.textInvokeModalXS.lineHeight};
   `,
+  labelModalXS: css`
+    font-size: ${({ theme }) => theme.typographyVariants.labelModalXS.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.labelModalXS.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.labelModalXS.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.labelModalXS.lineHeight};
+  `,
+  labelModalMD: css`
+    font-size: ${({ theme }) => theme.typographyVariants.labelModalMD.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.labelModalMD.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.labelModalMD.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.labelModalMD.lineHeight};
+  `,
+  titleModalXS: css`
+    font-size: ${({ theme }) => theme.typographyVariants.titleModalXS.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.titleModalXS.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.titleModalXS.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.titleModalXS.lineHeight};
+    text-transform: ${({ theme }) => theme.typographyVariants.titleModalXS.textTransform};
+  `,
+  titleModalMD: css`
+    font-size: ${({ theme }) => theme.typographyVariants.titleModalMD.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.titleModalMD.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.titleModalMD.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.titleModalMD.lineHeight};
+    text-transform: ${({ theme }) => theme.typographyVariants.titleModalMD.textTransform};
+  `,
 };
 
 export default TextStyleVariantsMap;
