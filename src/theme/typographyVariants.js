@@ -135,6 +135,12 @@ const typographyVariants = {
     lineHeight: '43px',
     textTransform: 'uppercase',
   },
+  inputText: {
+    fontSize: '18px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '22px',
+  },
 };
 
 export default typographyVariants;

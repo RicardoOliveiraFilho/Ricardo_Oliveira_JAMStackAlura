@@ -13,6 +13,8 @@ const Box = styled.div`
   ${propToStyle('width')}
   ${propToStyle('height')}
   ${propToStyle('borderRadius')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('marginTop')}
 `;
 
 export default Box;

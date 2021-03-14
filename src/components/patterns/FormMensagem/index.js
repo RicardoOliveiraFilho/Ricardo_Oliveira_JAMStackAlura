@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Lottie } from '@crello/react-lottie';
+
+import successAnimation from './animations/success.json';
+import errorAnimation from './animations/error.json';
 
 import Grid from '../../foundation/layout/Grid';
 import Box from '../../foundation/layout/Box';
@@ -7,14 +11,25 @@ import TextField from '../../forms/TextField';
 import Text from '../../foundation/Text';
 import FormWrapper from './styles/FormWrapper';
 
+const formStates = {
+  DEFAULT: 'DEFAULT',
+  DONE: 'DONE',
+  ERROR: 'ERROR',
+};
+
 function FormContent({ buttonClose }) {
+  const [isFormSubmited, setIsFormSubmited] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(formStates.DEFAULT);
   const [messageData, setMessageData] = useState({
     nameUser: '',
     emailUser: '',
     messageUser: '',
   });
+  const [emailIsValid, setEmailIsValid] = useState(true);
+  const [messageEmail, setMessageEmail] = useState('');
+  const emailPattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
-  const isFormInvalid = messageData.nameUser.length === 0
+  const isFormInvalid = !emailIsValid || messageData.nameUser.length === 0
     || messageData.emailUser.length === 0
     || messageData.messageUser.length === 0;
 
@@ -27,10 +42,51 @@ function FormContent({ buttonClose }) {
     });
   }
 
+  function validateEmail(event) {
+    if (!emailPattern.test(event.target.value)) {
+      setEmailIsValid(false);
+      setMessageEmail('Por favor, insira um endereço de email válido!');
+    } else {
+      setEmailIsValid(true);
+      setMessageEmail('');
+    }
+  }
+
   return (
     <FormWrapper
       onSubmit={(event) => {
         event.preventDefault();
+
+        setIsFormSubmited(true);
+
+        const messageDTO = {
+          name: messageData.nameUser,
+          email: messageData.emailUser,
+          message: messageData.messageUser,
+        };
+
+        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(messageDTO),
+        })
+          .then((respostaDoServidor) => {
+            if (respostaDoServidor.ok) {
+              return respostaDoServidor.json();
+            }
+
+            throw new Error('Não foi possível submeter o form');
+          })
+          // eslint-disable-next-line no-unused-vars
+          .then((respostaConvertidaEmObjeto) => {
+            setSubmissionStatus(formStates.DONE);
+          })
+          // eslint-disable-next-line no-unused-vars
+          .catch((error) => {
+            setSubmissionStatus(formStates.ERROR);
+          });
       }}
     >
       <Box
@@ -98,8 +154,19 @@ function FormContent({ buttonClose }) {
               name="emailUser"
               value={messageData.emailUser}
               onChange={handleChange}
+              onBlur={validateEmail}
               height="48px"
             />
+            {!emailIsValid && (
+              <Text
+                marginTop="-15px"
+                marginBottom="15px"
+                color="red"
+                variant="inputText"
+              >
+                {messageEmail}
+              </Text>
+            )}
             <Text
               tag="label"
               variant="labelModalXS"
@@ -119,6 +186,7 @@ function FormContent({ buttonClose }) {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            marginTop="-10px"
           >
             <Text
               tag="label"
@@ -134,6 +202,62 @@ function FormContent({ buttonClose }) {
             >
               { '>' }
             </Button>
+          </Grid.Row>
+          <Grid.Row
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            marginTop="-50px"
+          >
+            {isFormSubmited && submissionStatus === formStates.DONE && (
+              <>
+                <Lottie
+                  width="140px"
+                  height="140px"
+                  className="lottie-container basic"
+                  config={{ animationData: successAnimation, loop: false, autoplay: true }}
+                />
+                <Text
+                  color="green"
+                  variant="inputText"
+                  marginLeft={{
+                    xs: '-5px',
+                    md: '-45px',
+                  }}
+                  marginTop={{
+                    xs: '-80px',
+                    md: '0px',
+                  }}
+                >
+                  Mensagem enviada com sucesso!
+                </Text>
+              </>
+            )}
+
+            {isFormSubmited && submissionStatus === formStates.ERROR && (
+              <>
+                <Lottie
+                  width="140px"
+                  height="140px"
+                  className="lottie-container basic"
+                  config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+                />
+                <Text
+                  color="red"
+                  variant="inputText"
+                  marginLeft={{
+                    xs: '-5px',
+                    md: '-45px',
+                  }}
+                  marginTop={{
+                    xs: '-80px',
+                    md: '0px',
+                  }}
+                >
+                  Não foi possível enviar a mensagem!
+                </Text>
+              </>
+            )}
           </Grid.Row>
         </Grid.Col>
       </Box>

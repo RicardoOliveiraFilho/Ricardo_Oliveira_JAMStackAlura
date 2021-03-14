@@ -21,13 +21,14 @@ const Input = styled(Text)`
 
 Input.defaultProps = {
   tag: 'input',
-  variant: 'cardText',
+  variant: 'inputText',
 };
 
 export default function TextField({
   name,
   tag,
   onChange,
+  onBlur,
   value,
   ...props
 }) {
@@ -38,6 +39,7 @@ export default function TextField({
         as={tag}
         name={name}
         onChange={onChange}
+        onBlur={onBlur}
         value={value}
         {...props}
       />
@@ -48,5 +50,10 @@ export default function TextField({
 TextField.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
   value: PropTypes.string.isRequired,
+};
+
+TextField.defaultProps = {
+  onBlur: null,
 };

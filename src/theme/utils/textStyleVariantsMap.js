@@ -137,6 +137,12 @@ const TextStyleVariantsMap = {
     line-height: ${({ theme }) => theme.typographyVariants.titleModalMD.lineHeight};
     text-transform: ${({ theme }) => theme.typographyVariants.titleModalMD.textTransform};
   `,
+  inputText: css`
+    font-size: ${({ theme }) => theme.typographyVariants.inputText.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.inputText.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.inputText.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.inputText.lineHeight};
+  `,
 };
 
 export default TextStyleVariantsMap;

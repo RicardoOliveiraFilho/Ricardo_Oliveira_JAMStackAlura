@@ -14,6 +14,7 @@ const TextBase = styled.span`
   ${propToStyle('position')}
   ${propToStyle('marginRight')}
   ${propToStyle('marginLeft')}
+  ${propToStyle('color')}
 `;
 
 export default TextBase;

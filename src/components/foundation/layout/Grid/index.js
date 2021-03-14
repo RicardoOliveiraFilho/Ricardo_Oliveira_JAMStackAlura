@@ -39,6 +39,7 @@ const Row = styled.div`
   ${propToStyle('flexDirection')}
   ${propToStyle('display')}
   ${propToStyle('alignItems')}
+  ${propToStyle('marginTop')}
 `;
 
 const Col = styled.div`
