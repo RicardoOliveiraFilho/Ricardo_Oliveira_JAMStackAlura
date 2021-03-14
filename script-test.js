@@ -6,4 +6,4 @@ console.log('Olá Mundo');
 
 const resultado = shell.exec('git diff --name-only adicao_modal..main', { silent: true });
 
-console.log(resultado.stdout.split('\n'));
+console.log('Arquivos:', resultado.stdout.split('\n'));
