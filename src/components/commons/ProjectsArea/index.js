@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ProjectsAreaWrapper from './styles/ProjectsAreaWrapper';
 import SectionTitle from '../SectionTitle';
@@ -6,8 +6,12 @@ import Card from '../Card';
 import HighlightCard from '../HighlightCard';
 import Text from '../../foundation/Text';
 import Button from '../Button';
+import Modal from '../Modal';
+import FormMensagem from '../../patterns/FormMensagem';
 
 export default function ProjectsArea() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <ProjectsAreaWrapper>
       <SectionTitle />
@@ -26,9 +30,24 @@ export default function ProjectsArea() {
       >
         Entre em Contato
       </Text>
-      <Button circle>
+      <Button
+        circle
+        onClick={() => {
+          setIsModalOpen(!isModalOpen);
+        }}
+      >
         +
       </Button>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        {(propsDoModal) => (
+          <FormMensagem propsDoModal={propsDoModal} />
+        )}
+      </Modal>
     </ProjectsAreaWrapper>
   );
 }
