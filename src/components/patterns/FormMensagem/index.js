@@ -3,6 +3,7 @@ import { Lottie } from '@crello/react-lottie';
 
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
+import loadingAnimation from './animations/loading.json';
 
 import Grid from '../../foundation/layout/Grid';
 import Box from '../../foundation/layout/Box';
@@ -15,6 +16,7 @@ const formStates = {
   DEFAULT: 'DEFAULT',
   DONE: 'DONE',
   ERROR: 'ERROR',
+  LOADING: 'LOADING',
 };
 
 function FormContent({ buttonClose }) {
@@ -58,6 +60,7 @@ function FormContent({ buttonClose }) {
         event.preventDefault();
 
         setIsFormSubmited(true);
+        setSubmissionStatus(formStates.LOADING);
 
         const messageDTO = {
           name: messageData.nameUser,
@@ -256,6 +259,17 @@ function FormContent({ buttonClose }) {
                 >
                   Não foi possível enviar a mensagem!
                 </Text>
+              </>
+            )}
+
+            {isFormSubmited && submissionStatus === formStates.LOADING && (
+              <>
+                <Lottie
+                  width="140px"
+                  height="140px"
+                  className="lottie-container basic"
+                  config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+                />
               </>
             )}
           </Grid.Row>
