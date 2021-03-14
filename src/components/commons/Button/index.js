@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import propToStyle from '../../../theme/utils/propToStyle';
+
 const buttonDefault = css``;
 
 const buttonCircle = css`
@@ -28,6 +30,14 @@ const ButtonWrapper = styled.button`
 
     return buttonDefault;
   }}
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+
+  ${propToStyle('marginTop')}
+  ${propToStyle('marginRight')}
 `;
 
 export default function Button({ children, ...props }) {
