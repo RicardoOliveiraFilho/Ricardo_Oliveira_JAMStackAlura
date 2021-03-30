@@ -14,7 +14,9 @@ export default function ProjectsArea() {
 
   return (
     <ProjectsAreaWrapper>
-      <SectionTitle />
+      <SectionTitle>
+        Meus Projetos
+      </SectionTitle>
       <ProjectsAreaWrapper.Projects>
         <Card />
         <Card />
