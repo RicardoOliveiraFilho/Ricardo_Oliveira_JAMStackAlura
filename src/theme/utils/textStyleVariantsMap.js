@@ -143,6 +143,18 @@ const TextStyleVariantsMap = {
     font-style: ${({ theme }) => theme.typographyVariants.inputText.fontStyle};
     line-height: ${({ theme }) => theme.typographyVariants.inputText.lineHeight};
   `,
+  projectName: css`
+    font-size: ${({ theme }) => theme.typographyVariants.projectName.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.projectName.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.projectName.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.projectName.lineHeight};
+  `,
+  projectLink: css`
+    font-size: ${({ theme }) => theme.typographyVariants.projectLink.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.projectLink.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.projectLink.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.projectLink.lineHeight};
+  `,
 };
 
 export default TextStyleVariantsMap;

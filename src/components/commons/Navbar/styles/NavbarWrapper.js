@@ -14,7 +14,7 @@ const NavbarWrapper = styled.nav`
 
   a {
     text-decoration: none;
-    margin-right: 75px;
+    margin-right: 39px;
   }
 
   ${breakpointsMedia({

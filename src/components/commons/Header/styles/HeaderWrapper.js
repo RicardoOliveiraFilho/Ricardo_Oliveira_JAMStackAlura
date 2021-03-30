@@ -19,11 +19,11 @@ const HeaderWrapper = styled.header`
 `;
 
 HeaderWrapper.Left = styled.div`
-  padding-left: 80px;
+  padding-left: 15px;
 
   ${breakpointsMedia({
     md: css`
-      padding-left: 150px;
+      padding-left: 100px;
     `,
   })}
 `;
