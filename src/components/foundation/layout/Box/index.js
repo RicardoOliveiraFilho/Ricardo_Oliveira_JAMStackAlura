@@ -6,6 +6,7 @@ const Box = styled.div`
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
+  ${propToStyle('alignItems')}
   ${propToStyle('flexWrap')}
   ${propToStyle('backgroundColor')}
   ${propToStyle('boxShadow')}
@@ -15,6 +16,8 @@ const Box = styled.div`
   ${propToStyle('borderRadius')}
   ${propToStyle('marginLeft')}
   ${propToStyle('marginTop')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingRight')}
 `;
 
 export default Box;

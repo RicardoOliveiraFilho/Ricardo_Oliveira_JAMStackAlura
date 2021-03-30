@@ -16,8 +16,14 @@ const theme = {
         contrastColor: '#FFFFFF',
       },
     },
+    link: {
+      primary: {
+        color: '#0066FF',
+      },
+    },
   },
   fontFamily: '\'Fira Sans\', \'Fira Sans Condensed\', sans-serif',
+  transition: '200ms ease-in-out',
   typographyVariants,
   spaceValues: {
     xs: 16,

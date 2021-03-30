@@ -110,7 +110,7 @@ function FormContent({ buttonClose }) {
             paddingRight="15px"
             paddingLeft={{
               xs: '10px',
-              md: '289px',
+              md: '249px',
             }}
           >
             <Text

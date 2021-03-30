@@ -14,7 +14,18 @@ export default function ProjectsArea() {
 
   return (
     <ProjectsAreaWrapper>
-      <SectionTitle />
+      <SectionTitle
+        marginTop={{
+          xs: '40px',
+          md: '60px',
+        }}
+        marginBottom={{
+          xs: '16px',
+          md: '76px',
+        }}
+      >
+        Meus Projetos
+      </SectionTitle>
       <ProjectsAreaWrapper.Projects>
         <Card />
         <Card />

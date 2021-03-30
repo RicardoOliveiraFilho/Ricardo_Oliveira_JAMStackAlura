@@ -58,6 +58,9 @@ export default function Modal({ isOpen, onClose, children }) {
                 xs: '-300px',
                 md: '0px',
               }}
+              marginLeft={{
+                md: '160px',
+              }}
             >
               x
             </Button>

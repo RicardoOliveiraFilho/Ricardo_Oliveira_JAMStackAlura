@@ -38,6 +38,7 @@ const ButtonWrapper = styled.button`
 
   ${propToStyle('marginTop')}
   ${propToStyle('marginRight')}
+  ${propToStyle('marginLeft')}
 `;
 
 export default function Button({ children, ...props }) {
