@@ -18,6 +18,7 @@ const TextBase = styled.span`
   ${propToStyle('paddingLeft')}
   ${propToStyle('paddingRight')}
   ${propToStyle('textAlign')}
+  ${propToStyle('alignSelf')}
 `;
 
 export default TextBase;

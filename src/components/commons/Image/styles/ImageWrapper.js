@@ -26,6 +26,7 @@ const ImageWrapper = styled.div`
   ${propToStyle('transform')}
   ${propToStyle('position')}
   ${propToStyle('zIndex')}
+  ${propToStyle('flex')}
 `;
 
 export default ImageWrapper;

@@ -155,6 +155,30 @@ const TextStyleVariantsMap = {
     font-style: ${({ theme }) => theme.typographyVariants.projectLink.fontStyle};
     line-height: ${({ theme }) => theme.typographyVariants.projectLink.lineHeight};
   `,
+  textPage404XS: css`
+    font-size: ${({ theme }) => theme.typographyVariants.textPage404XS.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.textPage404XS.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.textPage404XS.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.textPage404XS.lineHeight};
+  `,
+  textPage404MD: css`
+    font-size: ${({ theme }) => theme.typographyVariants.textPage404MD.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.textPage404MD.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.textPage404MD.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.textPage404MD.lineHeight};
+  `,
+  titlePage404XS: css`
+    font-size: ${({ theme }) => theme.typographyVariants.titlePage404XS.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.titlePage404XS.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.titlePage404XS.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.titlePage404XS.lineHeight};
+  `,
+  titlePage404MD: css`
+    font-size: ${({ theme }) => theme.typographyVariants.titlePage404MD.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.titlePage404MD.fontWeight};
+    font-style: ${({ theme }) => theme.typographyVariants.titlePage404MD.fontStyle};
+    line-height: ${({ theme }) => theme.typographyVariants.titlePage404MD.lineHeight};
+  `,
 };
 
 export default TextStyleVariantsMap;
