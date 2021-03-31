@@ -10,6 +10,7 @@ const HeaderWrapper = styled.header`
   border-top: 2px solid ${({ theme }) => theme.colors.background.primary.color};
   background-color: ${({ theme }) => theme.colors.background.secundary.color};
   height: 40px;
+  width: 100%;
 
   ${breakpointsMedia({
     md: css`
@@ -19,17 +20,17 @@ const HeaderWrapper = styled.header`
 `;
 
 HeaderWrapper.Left = styled.div`
-  padding-left: 15px;
+  padding-left: 5px;
 
   ${breakpointsMedia({
     md: css`
-      padding-left: 100px;
+      padding-left: 70px;
     `,
   })}
 `;
 
 HeaderWrapper.Right = styled.div`
-
+  margin-right: 0px;
 `;
 
 export default HeaderWrapper;

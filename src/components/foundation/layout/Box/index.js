@@ -9,6 +9,9 @@ const Box = styled.div`
   ${propToStyle('alignItems')}
   ${propToStyle('flexWrap')}
   ${propToStyle('backgroundColor')}
+  ${propToStyle('backgroundImage')}
+  ${propToStyle('backgroundRepeat')}
+  ${propToStyle('backgroundPosition')}
   ${propToStyle('boxShadow')}
   ${propToStyle('padding')}
   ${propToStyle('width')}
@@ -16,8 +19,10 @@ const Box = styled.div`
   ${propToStyle('borderRadius')}
   ${propToStyle('marginLeft')}
   ${propToStyle('marginTop')}
+  ${propToStyle('marginBottom')}
   ${propToStyle('paddingLeft')}
   ${propToStyle('paddingRight')}
+  ${propToStyle('overflowX')}
 `;
 
 export default Box;

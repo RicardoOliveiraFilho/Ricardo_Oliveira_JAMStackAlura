@@ -21,7 +21,17 @@ const Container = styled.div`
     `,
   })}
 
-${propToStyle('marginTop')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('flex')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('padding')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingRight')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('flexDirection')}
+  ${propToStyle('display')}
+  ${propToStyle('alignItems')}
 `;
 
 const Row = styled.div`
@@ -40,6 +50,7 @@ const Row = styled.div`
   ${propToStyle('display')}
   ${propToStyle('alignItems')}
   ${propToStyle('marginTop')}
+  ${propToStyle('flexWrap')}
 `;
 
 const Col = styled.div`

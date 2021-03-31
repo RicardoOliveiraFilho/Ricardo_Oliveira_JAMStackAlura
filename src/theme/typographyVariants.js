@@ -153,6 +153,30 @@ const typographyVariants = {
     fontStyle: 'normal',
     lineHeight: '21px',
   },
+  textPage404XS: {
+    fontSize: '24px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '28px',
+  },
+  textPage404MD: {
+    fontSize: '36px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '43px',
+  },
+  titlePage404XS: {
+    fontSize: '120px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '144px',
+  },
+  titlePage404MD: {
+    fontSize: '144px',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    lineHeight: '172px',
+  },
 };
 
 export default typographyVariants;
