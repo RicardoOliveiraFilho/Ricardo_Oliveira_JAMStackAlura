@@ -25,6 +25,13 @@ module.exports = {
     'react/prop-types': 'off',
     'consistent-return': 'off',
     'func-names': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        arrowParens: 'avoid',
+        trailingComma: 'all'
+      },
+    ],
   },
 };
