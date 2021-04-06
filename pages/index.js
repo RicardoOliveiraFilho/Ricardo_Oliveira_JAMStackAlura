@@ -1,5 +1,11 @@
 import React from 'react';
 
+import Menu from '../src/components/commons/Menu';
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Menu />
+    </div>
+  );
 }
