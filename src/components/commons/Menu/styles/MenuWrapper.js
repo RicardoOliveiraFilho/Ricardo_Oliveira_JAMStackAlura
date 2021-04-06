@@ -40,6 +40,7 @@ MenuWrapper.RightSide = styled.div`
     &:hover,
     &:focus {
       text-decoration: underline;
+      opacity: 0.5;
     }
   }
 `;

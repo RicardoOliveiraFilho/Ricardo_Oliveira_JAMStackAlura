@@ -7,5 +7,10 @@ export default {
     links: {
       primary: '#070c0e',
     },
+    primary: {
+      main: {
+        color: '#070c0e',
+      },
+    },
   },
 };
