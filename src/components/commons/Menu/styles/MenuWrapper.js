@@ -9,8 +9,8 @@ const MenuWrapper = styled.nav`
   margin-top: 18px;
   padding-left: 28px;
   padding-right: 28px;
-  border-top: 1px solid #88989e;
-  border-bottom: 1px solid #88989e;
+  border-top: 3px solid ${({ theme }) => theme.colors.borders.primary};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.borders.primary};
 `;
 
 MenuWrapper.LeftSide = styled.div`
@@ -35,13 +35,11 @@ MenuWrapper.RightSide = styled.div`
     text-decoration: none;
     margin-left: 20px;
     font-size: 28px;
-    color: #88989e;
-    transition: 200ms ease-in-out;
+    color: ${({ theme }) => theme.colors.links.primary};
 
     &:hover,
     &:focus {
-      font-weight: 500;
-      color: #070c0e;
+      text-decoration: underline;
     }
   }
 `;
