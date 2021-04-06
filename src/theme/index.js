@@ -1,5 +1,8 @@
+import typographyVariants from './typographyVariants';
+
 export default {
   fontFamily: "'Rubik', sans-serif",
+  typographyVariants,
   colors: {
     borders: {
       primary: '#070c0e',

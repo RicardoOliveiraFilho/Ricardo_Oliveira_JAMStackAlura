@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const MenuWrapper = styled.nav`
-  font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +33,6 @@ MenuWrapper.RightSide = styled.div`
     display: block;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 28px;
     color: ${({ theme }) => theme.colors.links.primary};
 
     &:hover,
