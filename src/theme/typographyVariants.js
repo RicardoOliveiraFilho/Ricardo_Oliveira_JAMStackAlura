@@ -4,6 +4,16 @@ const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1.25,
   },
+  logoSM: {
+    fontSize: '62px',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
+  logoXS: {
+    fontSize: '28px',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
   menuItem: {
     fontSize: '28px',
     fontWeight: '400',

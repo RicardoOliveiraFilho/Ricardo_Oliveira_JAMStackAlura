@@ -1,22 +1,23 @@
 import React from 'react';
 
 import FooterWrapper from './styles/FooterWrapper';
+import Text from '../../foundation/Text';
 
 export default function Footer(props) {
   return (
     <FooterWrapper {...props}>
-      <a href="https://www.alura.com.br/">
+      <Text tag="a" variant="paragraph3" href="https://www.alura.com.br/">
         <img
           src="https://www.alura.com.br/assets/img/alura-logo.svg"
           alt="Logo Alura"
         />
-      </a>
-      <p>
+      </Text>
+      <Text tag="p" variant="paragraph3">
         Orgulhosamente criado durante o{' '}
-        <a href="https://www.alura.com.br/">
-          <span>Bootcamp Alura JAM Stack</span>
-        </a>
-      </p>
+        <Text tag="a" variant="paragraph3" href="https://www.alura.com.br/">
+          Bootcamp Alura JAM Stack
+        </Text>
+      </Text>
     </FooterWrapper>
   );
 }

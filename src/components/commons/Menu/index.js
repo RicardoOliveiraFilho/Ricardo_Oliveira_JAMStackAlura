@@ -22,7 +22,7 @@ export default function Menu() {
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
-        <Text variant="logo" tag="h1">
+        <Text variant="logoXS" tag="h1">
           Ricardo Oliveira
         </Text>
       </MenuWrapper.LeftSide>
@@ -30,7 +30,7 @@ export default function Menu() {
         {links.map(link => {
           return (
             <li key={link.url}>
-              <Text variant="menuItem" tag="a" href={link.url}>
+              <Text variant="paragraph3" tag="a" href={link.url}>
                 {link.texto}
               </Text>
             </li>
