@@ -14,6 +14,11 @@ const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1.25,
   },
+  title: {
+    fontSize: '32px',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
   menuItem: {
     fontSize: '28px',
     fontWeight: '400',

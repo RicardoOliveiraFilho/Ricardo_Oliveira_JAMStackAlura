@@ -14,6 +14,9 @@ export default {
       main: {
         color: '#070c0e',
       },
+      light: {
+        color: '#88989E',
+      },
     },
   },
   breakpoints: {
