@@ -10,8 +10,8 @@ export default function Menu() {
       url: '/',
     },
     {
-      texto: 'Sobre mim',
-      url: '/sobre-mim',
+      texto: 'Projetos',
+      url: '/projetos',
     },
     {
       texto: 'Contato',
