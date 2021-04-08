@@ -1,24 +1,13 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-
-import breakpointsMedia from '../src/theme/utils/breakpointsMedia';
-import TextStyleVariantsMap from '../src/theme/textStyleVariantsMap';
 
 import Box from '../src/components/foundation/layout/Box';
 import Menu from '../src/components/commons/Menu';
 import Footer from '../src/components/commons/Footer';
 import Grid from '../src/components/foundation/layout/Grid';
-import Text from '../src/components/foundation/Text';
+import Button from '../src/components/commons/Button';
+import ContactCard from '../src/components/commons/ContactCard';
 
-const TextWrapper = styled.div`
-  ${breakpointsMedia({
-    md: css`
-      h1 {
-        ${TextStyleVariantsMap.logo}
-      }
-    `,
-  })}
-`;
+import contactInfos from '../src/data/contact-infos';
 
 export default function Contato() {
   return (
@@ -48,16 +37,15 @@ export default function Contato() {
             justifyContent="center"
             flexDirection="column"
           >
-            <TextWrapper>
-              <Text
-                variant="logoXS"
-                tag="h1"
-                color="primary.main"
-                textAlign="center"
-              >
-                Contato
-              </Text>
-            </TextWrapper>
+            {contactInfos.map(contactInfo => {
+              return (
+                <ContactCard contactInfo={contactInfo} key={contactInfo.key} />
+              );
+            })}
+
+            <Button ghost variant="primary.main" marginTop="64px">
+              Contacte-me!
+            </Button>
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>

@@ -73,7 +73,7 @@ MenuWrapper.RightSide = styled.div`
     text-decoration: none;
     margin-left: 15px;
     color: ${({ theme }) => theme.colors.links.primary};
-
+    transition: opacity ${({ theme }) => theme.transition};
     &:hover,
     &:focus {
       text-decoration: underline;

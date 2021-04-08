@@ -39,6 +39,11 @@ const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1,
   },
+  paragraph5: {
+    fontSize: '24px',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
 };
 
 export default typographyVariants;

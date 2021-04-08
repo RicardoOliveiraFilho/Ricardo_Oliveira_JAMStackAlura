@@ -42,6 +42,13 @@ const TextStyleVariantsMap = {
     line-height: ${({ theme }) =>
       theme.typographyVariants.paragraph3.lineHeight};
   `,
+  paragraph5: css`
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph5.fontSize};
+    font-weight: ${({ theme }) =>
+      theme.typographyVariants.paragraph5.fontWeight};
+    line-height: ${({ theme }) =>
+      theme.typographyVariants.paragraph5.lineHeight};
+  `,
 };
 
 export default TextStyleVariantsMap;
