@@ -16,6 +16,11 @@ const TextStyleVariantsMap = {
     font-weight: ${({ theme }) => theme.typographyVariants.logoXS.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.logoXS.lineHeight};
   `,
+  title: css`
+    font-size: ${({ theme }) => theme.typographyVariants.title.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.title.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.title.lineHeight};
+  `,
   menuItem: css`
     font-size: ${({ theme }) => theme.typographyVariants.menuItem.fontSize};
     font-weight: ${({ theme }) => theme.typographyVariants.menuItem.fontWeight};

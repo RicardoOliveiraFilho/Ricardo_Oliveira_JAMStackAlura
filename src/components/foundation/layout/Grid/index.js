@@ -52,6 +52,11 @@ const Grid = {
         margin-right: -16px;
       `,
     })}
+
+    ${propToStyle('flex')}
+    ${propToStyle('marginLeft')}
+    ${propToStyle('marginRight')}
+    ${propToStyle('justifyContent')}
   `,
 
   Col: styled.div`
@@ -151,10 +156,11 @@ const Grid = {
       });
     }}
 
-  ${propToStyle('display')}
-  ${propToStyle('alignItems')}
-  ${propToStyle('justifyContent')}
-  ${propToStyle('flexDirection')}
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('flexDirection')}
+    ${propToStyle('paddingRight')}
   `,
 };
 
