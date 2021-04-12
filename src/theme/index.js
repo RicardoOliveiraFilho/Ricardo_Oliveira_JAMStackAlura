@@ -14,6 +14,12 @@ export default {
       main: {
         color: '#070c0e',
       },
+      error: {
+        color: '#ff0000',
+      },
+      success: {
+        color: '#00ff00',
+      },
       light: {
         color: '#88989E',
       },

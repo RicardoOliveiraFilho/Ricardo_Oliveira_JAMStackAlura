@@ -11,6 +11,7 @@ const TextBase = styled.span`
   color: ${props => get(props.theme, `colors.${props.color}.color`)};
 
   ${propToStyle('textAlign')}
+  ${propToStyle('marginTop')}
 `;
 
 export default function Text({ tag, variant, children, ...props }) {

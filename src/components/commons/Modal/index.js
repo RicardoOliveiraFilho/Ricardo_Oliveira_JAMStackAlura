@@ -37,7 +37,7 @@ export default function Modal({ isOpen, onClose, children }) {
           sm: '30px',
         }}
         marginTop={{
-          xs: '360px',
+          xs: '330px',
           md: '500px',
           lg: '700px',
           xl: '500px',
