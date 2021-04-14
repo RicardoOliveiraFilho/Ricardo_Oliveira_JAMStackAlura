@@ -15,10 +15,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'prettier',
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',
@@ -30,7 +27,7 @@ module.exports = {
       {
         singleQuote: true,
         arrowParens: 'avoid',
-        trailingComma: 'all'
+        trailingComma: 'all',
       },
     ],
   },
