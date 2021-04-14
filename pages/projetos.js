@@ -9,8 +9,14 @@ import Menu from '../src/components/commons/Menu';
 import Footer from '../src/components/commons/Footer';
 import Grid from '../src/components/foundation/layout/Grid';
 import Text from '../src/components/foundation/Text';
+import Slider from '../src/components/commons/Slider';
+
+import sliderItens from '../src/data/slider-itens';
 
 const TextWrapper = styled.div`
+  margin: 0;
+  padding: 0;
+
   ${breakpointsMedia({
     md: css`
       h1 {
@@ -20,7 +26,7 @@ const TextWrapper = styled.div`
   })}
 `;
 
-export default function Page404() {
+export default function Projetos() {
   return (
     <Box
       flex="1"
@@ -31,12 +37,7 @@ export default function Page404() {
     >
       <Menu />
 
-      <Grid.Container
-        marginTop={{
-          xs: '32px',
-          md: '60px',
-        }}
-      >
+      <Grid.Container>
         <Grid.Row>
           <Grid.Col
             value={{
@@ -54,10 +55,19 @@ export default function Page404() {
                 tag="h1"
                 color="primary.main"
                 textAlign="center"
+                margin="0px"
+                padding="0px"
+                marginLeft={{
+                  sm: '-50px',
+                  md: '60px',
+                  lg: '10px',
+                }}
               >
-                404 - Página não Encontrada
+                Projetos
               </Text>
             </TextWrapper>
+
+            <Slider itens={sliderItens} />
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>

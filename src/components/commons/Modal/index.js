@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { createGlobalStyle } from 'styled-components';
 
 import ModalWrapper from './styles/ModalWrapper';
-import Button from '../Button';
 
 const LockScroll = createGlobalStyle`
   body {
@@ -16,8 +15,10 @@ export default function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
       isOpen={isOpen}
-      onClick={(event) => {
-        const isSafeArea = event.target.closest('[data-model-safe-area="true"]');
+      onClick={event => {
+        const isSafeArea = event.target.closest(
+          '[data-modal-safe-area="true"]',
+        );
 
         if (!isSafeArea) {
           onClose();
@@ -25,54 +26,51 @@ export default function Modal({ isOpen, onClose, children }) {
       }}
     >
       {isOpen && <LockScroll />}
-      <motion.div
-        variants={{
-          open: {
-            y: '0%',
-          },
-          closed: {
-            y: '100%',
-          },
+
+      <ModalWrapper.Content
+        marginLeft={{
+          md: '80px',
+          lg: '225px',
+          xl: '600px',
         }}
-        animate={isOpen ? 'open' : 'closed'}
-        transition={{
-          duration: 0.3,
+        marginRight={{
+          sm: '30px',
         }}
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
+        marginTop={{
+          xs: '330px',
+          md: '500px',
+          lg: '700px',
+          xl: '500px',
+        }}
+        width={{
+          lg: '600px',
         }}
       >
-        {children({
-          'data-model-safe-area': 'true',
-          buttonClose: (
-            <Button
-              type="submit"
-              circle
-              onClick={onClose}
-              marginTop={{
-                xs: '10px',
-                md: '0px',
-              }}
-              marginRight={{
-                xs: '-300px',
-                md: '0px',
-              }}
-              marginLeft={{
-                md: '160px',
-              }}
-            >
-              x
-            </Button>
-          ),
-        })}
-      </motion.div>
+        <motion.div
+          variants={{
+            open: {
+              y: '-50%',
+            },
+            closed: {
+              y: '100%',
+            },
+          }}
+          animate={isOpen ? 'open' : 'closed'}
+          transition={{
+            duration: 0.5,
+          }}
+        >
+          {children({
+            'data-modal-safe-area': 'true',
+          })}
+        </motion.div>
+      </ModalWrapper.Content>
     </ModalWrapper>
   );
 }
 
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
   children: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };

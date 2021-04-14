@@ -1,50 +1,60 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
 
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import TextStyleVariantsMap from '../../../theme/textStyleVariantsMap';
 import propToStyle from '../../../theme/utils/propToStyle';
 
-const buttonDefault = css``;
-
-const buttonCircle = css`
-  border: 1px solid ${({ theme }) => theme.colors.background.primary.color};
-  border-radius: 25px;
-  box-sizing: border-box;
+const buttonGhost = css`
+  color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
   background: transparent;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: 1px solid ${({ theme }) => theme.colors.borders.primary};
 `;
 
-const ButtonWrapper = styled.button`
+const Button = styled.button`
+  border: 0;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
-
-  font-family: Fira Sans;
-  font-style: normal;
+  padding: 12px 26px;
   font-weight: bold;
-  font-size: 32px;
-  line-height: 38px;
+  transition: opacity ${({ theme }) => theme.transition};
+  ${({ ghost }) => (ghost ? buttonGhost : '')}
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 
-  ${function (props) {
-    if (props.circle) {
-      return buttonCircle;
-    }
-
-    return buttonDefault;
-  }}
+  ${breakpointsMedia({
+    xs: css`
+      margin-left: -5px;
+      ${TextStyleVariantsMap.paragraph3}
+    `,
+    sm: css`
+      margin-left: -60px;
+    `,
+    md: css`
+      margin-left: 70px;
+      ${TextStyleVariantsMap.menuItem}
+    `,
+    lg: css`
+      margin-left: -15px;
+      ${TextStyleVariantsMap.menuItem}
+    `,
+  })}
 
   &:disabled {
     cursor: not-allowed;
-    opacity: .2;
+    opacity: 0.2;
   }
 
+  ${({ fullWidth }) =>
+    fullWidth &&
+    css`
+      width: 100%;
+    `};
+
   ${propToStyle('marginTop')}
-  ${propToStyle('marginRight')}
   ${propToStyle('marginLeft')}
 `;
 
-export default function Button({ children, ...props }) {
-  return (
-    <ButtonWrapper {...props}>
-      {children}
-    </ButtonWrapper>
-  );
-}
+export default Button;

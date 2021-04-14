@@ -1,38 +1,37 @@
 import typographyVariants from './typographyVariants';
 
-const theme = {
+export default {
+  fontFamily: "'Rubik', sans-serif",
+  typographyVariants,
   colors: {
-    background: {
-      primary: {
-        color: '#E9C46A',
-      },
-      secundary: {
-        color: '#FFF8E6',
-      },
+    borders: {
+      primary: '#070c0e',
+    },
+    links: {
+      primary: '#070c0e',
     },
     primary: {
       main: {
-        color: '#000000',
-        contrastColor: '#FFFFFF',
+        color: '#070c0e',
+      },
+      error: {
+        color: '#ff0000',
+      },
+      success: {
+        color: '#00ff00',
+      },
+      light: {
+        color: '#88989E',
       },
     },
-    link: {
-      primary: {
-        color: '#0066FF',
-      },
-    },
-  },
-  fontFamily: '\'Fira Sans\', \'Fira Sans Condensed\', sans-serif',
-  transition: '200ms ease-in-out',
-  typographyVariants,
-  spaceValues: {
-    xs: 16,
-    md: 9,
   },
   breakpoints: {
     xs: 0,
+    sm: 480,
     md: 768,
+    lg: 992,
+    xl: 1200,
   },
+  borderRadius: '8px',
+  transition: '200ms ease-in-out',
 };
-
-export default theme;

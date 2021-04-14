@@ -15,8 +15,17 @@ function propToStyle(propName) {
         xs: {
           [propName]: propValue.xs,
         },
+        sm: {
+          [propName]: propValue.sm,
+        },
         md: {
           [propName]: propValue.md,
+        },
+        lg: {
+          [propName]: propValue.lg,
+        },
+        xl: {
+          [propName]: propValue.xl,
         },
       });
     }
